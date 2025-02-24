@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos generales */
+body {
+    @apply font-sans bg-gray-100;
+}
+
+/* Ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Lista del carrito */
+#cart-list li {
+    @apply flex justify-between items-center py-2 border-b border-gray-300;
+}
+
+/* Botones con transiciones */
+button {
+    @apply transition duration-300;
+}
+
+button:hover {
+    @apply opacity-80;
+}
+
+/* Modal */
+#modal {
+    @apply fixed inset-0 flex items-center justify-center bg-black bg-opacity-50;
+}
+
+/* Estilos para los botones */
+.btn {
+    @apply px-4 py-2 font-semibold rounded-lg shadow-md;
+}
+
+.btn-primary {
+    @apply bg-blue-500 text-white;
+}
+
+.btn-primary:hover {
+    @apply bg-blue-600;
+}
+
+.btn-success {
+    @apply bg-green-500 text-white;
+}
+
+.btn-success:hover {
+    @apply bg-green-600;
+}
+
+.btn-secondary {
+    @apply bg-gray-500 text-white;
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-600;
+}

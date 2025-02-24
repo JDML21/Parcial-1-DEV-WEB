@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Bootstrap | Product List With Cart</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap" rel="stylesheet">
+
+</head>
+
+  <body class="bg-light">
+    <header class="container py-4">
+        <h1 class="fs-2 fw-bold">Desserts</h1>
+    </header>
+    
+    <main class="container py-4">
+        <section class="row g-4">
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-waffle-desktop.jpg" alt="Waffle with Berries" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Waffle with Berries</h2>
+                        <p class="text-danger fw-bold">$6.50</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Waffle with Berries', 6.50)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+  
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-creme-brulee-desktop.jpg" alt="Vanilla Bean Crème Brûlée" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Vanilla Bean Crème Brûlée</h2>
+                        <p class="text-danger fw-bold">$7.00</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Vanilla Bean Crème Brûlée', 7.00)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+  
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-macaron-desktop.jpg" alt="Macaron Mix of Five" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Macaron Mix of Five</h2>
+                        <p class="text-danger fw-bold">$8.00</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Macaron Mix of Five', 8.00)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+  
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-tiramisu-desktop.jpg" alt="Classic Tiramisu" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Classic Tiramisu</h2>
+                        <p class="text-danger fw-bold">$5.50</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Classic Tiramisu', 5.50)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+  
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-baklava-desktop.jpg" alt="Pistachio Baklava" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Pistachio Baklava</h2>
+                        <p class="text-danger fw-bold">$4.00</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Pistachio Baklava', 4.00)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+  
+            <article class="col-md-4">
+                <div class="card shadow">
+                    <img src="assets/image-meringue-desktop.jpg" alt="Lemon Meringue Pie" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title fs-4">Lemon Meringue Pie</h2>
+                        <p class="text-danger fw-bold">$5.00</p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Lemon Meringue Pie', 5.00)">Agregar</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <section class="mt-5 p-4 bg-white shadow rounded">
+            <header>
+                <h2 class="fs-3 fw-bold mb-3">Tu Carrito</h2>
+            </header>
+            <ul id="cart-list" class="list-group mb-3"></ul>
+            <p class="fw-bold">Total: $<span id="cart-total">0.00</span></p>
+            <button class="btn btn-success mt-2" onclick="confirmOrder()">Confirmar Pedido</button>
+            <button class="btn btn-secondary mt-2" onclick="resetCart()">Iniciar Nuevo Pedido</button>
+        </section>
+    </main>
+    
+    
+    
+    <script src="script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+
+</html>
